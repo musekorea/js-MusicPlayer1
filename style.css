@@ -1,0 +1,145 @@
+/*@import url("css/reset.css");*/
+gitTest * {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+  color: gold;
+}
+a:hover {
+  transform: scale(1.25);
+  color: tomato;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #c7141777;
+  display: flex;
+  justify-content: center;
+}
+.player {
+  font-size: 12px;
+  color: white;
+  position: relative;
+}
+
+.iphone {
+  width: 350px;
+  margin-top: 50px;
+}
+
+.container {
+  position: absolute;
+  top: 142px;
+  left: 28px;
+  width: 293px;
+  height: 517px;
+  padding: 15px;
+  border-radius: 2px;
+  background: #3a447a;
+}
+.statusBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  color: white;
+  user-select: none;
+}
+
+.statusBarIcons {
+  width: 71px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@keyframes wifiMove {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.fa-wifi {
+  animation: wifiMove 2.1s ease-in-out infinite;
+}
+.statusBarClock {
+  font-size: 13px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: black;
+}
+
+.albumCover {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.albumImg {
+  width: 250px;
+  border-radius: 10px;
+}
+.albumTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+  user-select: none;
+}
+.albumTitle a {
+  color: white;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+.albumTitle a:hover {
+  transform: scale(1.25);
+  color: tomato;
+}
+.albumTitleSong {
+  font-size: 16px;
+  margin: 0px;
+}
+.albumTitleArtist {
+  opacity: 0.5;
+  font-size: 12px;
+  margin: 3px;
+}
+.timer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  user-select: none;
+}
+.seek {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  margin-bottom: 15px;
+}
+.seek .fill {
+  width: 0;
+  height: 5px;
+  background: crimson;
+}
+
+.playBtns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+}
