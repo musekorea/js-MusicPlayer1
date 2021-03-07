@@ -166,3 +166,30 @@ body {
 .hide {
   display: none;
 }
+.songVolume,
+.muteVolume {
+  position: absolute;
+  bottom: 110px;
+  right: 22px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.1s ease-in-out;
+}
+.muteVolume {
+  font-size: 18px;
+  opacity: 0.6;
+}
+.songVolume:hover,
+.muteVolume:hover {
+  transform: scale(1.2);
+  color: crimson;
+}
+.volumeRange {
+  transform: rotate(270deg);
+  position: absolute;
+  left: 212px;
+  bottom: 177px;
+  margin: 0;
+  width: 100px;
+  height: 3px;
+}

@@ -24,6 +24,8 @@ pauseSongBtn.addEventListener('click', playToggle);
 nextSongBtn.addEventListener('click', nextSong);
 beforSongBtn.addEventListener('click', beforeSong);
 shuffleSongBtn.addEventListener('click', randomPlay);
+musicFile.addEventListener('ended', nextSong);   
+//이거 ended 조금delay시간을 주고 시작될 수 있도록 해보자
 
 if (randomPlay===true){
   currentSong = randomNumber;
