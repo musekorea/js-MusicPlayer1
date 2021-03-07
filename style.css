@@ -91,6 +91,7 @@ body {
 }
 .albumImg {
   width: 250px;
+  height: 250px;
   border-radius: 10px;
 }
 .albumTitle {
@@ -142,10 +143,10 @@ body {
   background-color: white;
   margin-bottom: 15px;
 }
-.seek .fill {
+.fillBar {
   width: 0;
   height: 5px;
-  background: crimson;
+  background: tomato;
 }
 
 .playBtns {
