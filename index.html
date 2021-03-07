@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <script defer src="https://kit.fontawesome.com/8b5a5cb437.js" crossorigin="anonymous"></script>
   <script defer src="js/main.js"></script>
   <script defer src="js/clock.js"></script>
   <script defer src="js/online.js"></script>
+  <script defer src="js/control.js"></script>
+  <script defer src="js/like.js"></script>
+  <link rel="stylesheet" href="style.css">
   <title>Music Player 2021</title>
 
 </head>
@@ -29,20 +31,19 @@
     <!---------------Player Header------------------------->
 
       <div class="header">
-        <a href="#"><i class="fas fa-chevron-left"></i></a>
-        <a href="#"><i class="fas fa-bars"></i></a>
-        
+        <i class="fas fa-chevron-left"></i>
+        <i class="fas fa-bars"></i>
       </div>
 
     <!----------------- Album Cover---------------------->
 
       <div class="albumCover">
-        <img class="albumImg" src="img/cover1.webp" alt="Manfred Mann's Earth Band - watch">
+        <img class="albumImg" src="" alt="Manfred Mann's Earth Band - watch">
       </div>
 
     <!----------------- Title----------------------------->
       <div class="albumTitle">
-        <a href="#"><i class="fas fa-heart albumTitleLike"></i></a>
+        <i class="fas fa-heart "></i>
         <h4 class="albumTitleSong">Circles (Alan Mark)</h4>
         <p class="albumTitleArtist">Manfred Mann's Earth Band </p>
       </div>
@@ -63,25 +64,17 @@
 
       <div class="controls">
         <div class="playBtns">
-          <a href="#"><i class="fas fa-random"></i></a>
-          <a href="#"><i class="fas fa-step-backward"></i></i></a>
-          <a href="#"><i class="fas fa-play"></i></a>
-          <!--<a href="#"><i class="fas fa-pause"></i></a>-->
-          <a href="#"><i class="fas fa-step-forward"></i></a>
-          <a href="#"><i class="fas fa-redo"></i></a>
+          <i class="fas fa-random"></i>
+          <i class="fas fa-step-backward"></i>
+          <i class="fas fa-play"></i>
+          <i class="hide fas fa-pause"></i>
+          <i class="fas fa-step-forward"></i>
+          <i class="fas fa-redo"></i>
           <!--<a href="#"><i class="fas fa-volume-up"></i></a>-->
           <!--<a href="#"><i class="fas fa-folder-plus"></i></a>-->
-          
-          
         </div>
       </div>
-
-
-
     </div>
   </div>
-
-
-  
 </body>
 </html>

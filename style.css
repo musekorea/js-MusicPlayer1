@@ -1,16 +1,6 @@
 /*@import url("css/reset.css");*/
-gitTest * {
+* {
   box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-  transition: all 0.1s ease-in-out;
-  color: gold;
-}
-a:hover {
-  transform: scale(1.25);
-  color: tomato;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -30,6 +20,7 @@ body {
 .iphone {
   width: 350px;
   margin-top: 50px;
+  user-select: none;
 }
 
 .container {
@@ -47,11 +38,11 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
-  color: white;
   user-select: none;
 }
 
 .statusBarIcons {
+  color: white;
   width: 71px;
   display: flex;
   justify-content: space-between;
@@ -68,6 +59,7 @@ body {
     transform: scale(1);
   }
 }
+
 .fa-wifi {
   animation: wifiMove 2.1s ease-in-out infinite;
 }
@@ -81,13 +73,21 @@ body {
   align-items: center;
   margin-bottom: 15px;
   font-size: 16px;
-  color: black;
+}
+.header i {
+  color: gold;
+  transition: all 0.1s ease-in-out;
+}
+.header i:hover {
+  transform: scale(1.25);
+  color: tomato;
 }
 
 .albumCover {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+  user-select: none;
 }
 .albumImg {
   width: 250px;
@@ -101,12 +101,23 @@ body {
   margin-bottom: 15px;
   user-select: none;
 }
-.albumTitle a {
+@keyframes heartPop {
+  from {
+    color: white;
+  }
+  to {
+    color: tomato;
+  }
+}
+.albumTitleLike {
+  animation: heartPop 0.9s ease-in-out infinite;
+}
+.albumTitle i {
   color: white;
   margin-bottom: 6px;
   font-size: 16px;
 }
-.albumTitle a:hover {
+.albumTitle i:hover {
   transform: scale(1.25);
   color: tomato;
 }
@@ -142,4 +153,15 @@ body {
   justify-content: space-around;
   align-items: center;
   font-size: 16px;
+}
+.playBtns i {
+  color: gold;
+  transition: all 0.1s ease-in-out;
+}
+.playBtns i:hover {
+  transform: scale(1.25);
+  color: tomato;
+}
+.hide {
+  display: none;
 }
