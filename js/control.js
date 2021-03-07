@@ -4,7 +4,6 @@ const nextSongBtn = document.querySelector('.fa-step-forward');
 const beforSongBtn = document.querySelector('.fa-step-backward');
 const shuffleSongBtn = document.querySelector('.fa-random');
 const repeatSongBtn = document.querySelector('.fa-redo');
-console.log(pauseSongBtn);
 
 class Playlist{
   constructor(songName,musician,coverImg){
@@ -14,34 +13,61 @@ class Playlist{
   }
 }
 const music1 = new Playlist('Circles',`ManfredMann's EarthBand`,'img/circles.webp');
-const music1_File = new Audio('audio/circles.mp3');
+const musicFile = new Audio();
 
-let playing = false;
+let isPaused;
+let isPlaying = false;
+let playListArray = ['audio/circles.mp3', 'audio/blackbird.mp3'];
+let currentSong = 0;
 
 playSongBtn.addEventListener('click', playMusic);
-pauseSongBtn.addEventListener('click', playMusic);
+pauseSongBtn.addEventListener('click', playToggle);
+nextSongBtn.addEventListener('click', nextSong);
+beforSongBtn.addEventListener('click', beforeSong);
 
-function playMusic(event){
-  event.preventDefault();
-  if (playing===false){
+function playMusic(){
+    if(isPlaying===false){
+    console.log('newplay');
     albumCover()
-    music1_File.play();
+    musicFile.src=playListArray[currentSong];
+    musicFile.play();
     playSongBtn.classList.add('hide');
     pauseSongBtn.classList.remove('hide');
+    isPaused = true;
+    isPlaying = true;
   }else{
-    music1_File.pause();
-    pauseSongBtn.classList.add('hide');
-    playSongBtn.classList.remove('hide');
+    playToggle();
   }
-    playing = !playing
 }
 
-function nextSong(){
-
+function playToggle(event){
+    if (isPaused===true){
+      console.log('paused');
+    musicFile.pause();
+    playSongBtn.classList.remove('hide');
+    pauseSongBtn.classList.add('hide');
+    isPaused=!isPaused;
+    }else{
+    console.log('repause');
+    musicFile.play();
+    isPaused=!isPaused;
+    pauseSongBtn.classList.remove('hide');
+    playSongBtn.classList.add('hide');
+   }
 }
-function beforeSong(){
 
+function nextSong(event){
+  musicFile.pause();
+  let nextSongNumber = ++currentSong;
+  musicFile.src=playListArray[nextSongNumber];
+  musicFile.play();
+  currentSong++;
 }
+
+function beforeSong(event){
+  console.log(event);
+}
+
 
 function albumCover(){
   const albumImg = document.querySelector('.albumImg')
